@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site des Mini-Jeux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bienvenue sur notre Site de Mini-Jeux</h1>
+            <p>Complète tous les mini-jeux et découvre des surprises cachées !</p>
+            <button id="infoButton">Découvre ton cadeau !</button>
+            <button id="startButton">Commencer les Mini-Jeux</button>
+            <button id="hiddenHeartButton">❤️</button>
+        </header>
+
+        <section id="gamesContainer" style="display: none;">
+            <div class="game" id="game1" style="display: none;">
+                <h2>Jeu 1: Trouve l'élément caché</h2>
+                <img src="https://example.com/image-cachée.jpg" alt="Image Jeu 1">
+                <button onclick="playFindHiddenObjectGame()">Commencer Jeu 1</button>
+            </div>
+            <div class="game" id="game2" style="display: none;">
+                <h2>Jeu 2: Réponds à la question</h2>
+                <button onclick="playQuestionGame()">Commencer Jeu 2</button>
+            </div>
+            <div class="game" id="game3" style="display: none;">
+                <h2>Jeu 3: Pac-Man</h2>
+                <canvas id="pacmanCanvas" width="300" height="300"></canvas>
+                <button onclick="startPacMan()">Commencer Pac-Man</button>
+            </div>
+            <div class="game" id="game4" style="display: none;">
+                <h2>Jeu 4: Snake</h2>
+                <canvas id="snakeCanvas" width="300" height="300"></canvas>
+                <button onclick="startSnake()">Commencer Snake</button>
+            </div>
+            <div class="game" id="game5" style="display: none;">
+                <h2>Jeu 5: Puzzle 3x3</h2>
+                <div id="puzzleContainer"></div>
+                <button onclick="startPuzzleGame()">Commencer Puzzle</button>
+            </div>
+            <div class="game" id="game6" style="display: none;">
+                <h2>Jeu 6: Math Quiz</h2>
+                <button onclick="startMathQuiz()">Commencer Quiz</button>
+            </div>
+            <div class="game" id="game7" style="display: none;">
+                <h2>Jeu 7: Trouver la différence</h2>
+                <img src="https://example.com/image-differences.jpg" alt="Image Jeu 7" id="findDifferenceImage">
+                <button onclick="startFindDifference()">Commencer Trouver la différence</button>
+            </div>
+            <div class="game" id="game8" style="display: none;">
+                <h2>Jeu 8: Jeu du Memory</h2>
+                <div id="memoryGameContainer"></div>
+                <button onclick="startMemoryGame()">Commencer Memory</button>
+            </div>
+            <div class="game" id="game9" style="display: none;">
+                <h2>Jeu 9: Jeu de Labyrinthe</h2>
+                <canvas id="mazeCanvas" width="300" height="300"></canvas>
+                <button onclick="startMazeGame()">Commencer Labyrinthe</button>
+            </div>
+            <div class="game" id="game10" style="display: none;">
+                <h2>Jeu 10: Quiz Général</h2>
+                <button onclick="startGeneralQuiz()">Commencer Quiz Général</button>
+            </div>
+        </section>
+
+        <section id="progressSection" style="display: none;">
+            <div id="progressMessage">
+                <p id="progressText"></p>
+                <button id="nextGameButton">Passer au jeu suivant</button>
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="Surprise">
+                <p id="modalText">Surprise !</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
